@@ -160,7 +160,6 @@ function Menu() {
     ['carb'],
     true,
     toast_price,
-    0,
     BakeryItem(
       'toast',
       ['carb'],
@@ -176,7 +175,6 @@ function Menu() {
     ['protein'],
     true,
     cheese_price,
-    0,
     BakeryItem(
       'cheese',
       ['protein'],
@@ -192,7 +190,6 @@ function Menu() {
     ['carb'],
     true,
     waffle_price,
-    0,
     BakeryItem(
       'waffles',
       ['carb'],
@@ -209,7 +206,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     chicken_price,
-    1,
     BakeryItem(
       'chicken',
       ['protein', 'fat'],
@@ -226,7 +222,6 @@ function Menu() {
     ['protein'],
     false,
     steak_price,
-    1,
     BakeryItem(
       'steak',
       ['protein'],
@@ -397,7 +392,7 @@ function Menu() {
     })
   } else {
     final_list.sort(function (a, b) {
-      return a[3] - b[3]
+      return a[2] - b[2]
     })
   }
 

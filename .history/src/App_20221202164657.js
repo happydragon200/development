@@ -160,7 +160,6 @@ function Menu() {
     ['carb'],
     true,
     toast_price,
-    0,
     BakeryItem(
       'toast',
       ['carb'],
@@ -176,7 +175,6 @@ function Menu() {
     ['protein'],
     true,
     cheese_price,
-    0,
     BakeryItem(
       'cheese',
       ['protein'],
@@ -192,7 +190,6 @@ function Menu() {
     ['carb'],
     true,
     waffle_price,
-    0,
     BakeryItem(
       'waffles',
       ['carb'],
@@ -209,7 +206,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     chicken_price,
-    1,
     BakeryItem(
       'chicken',
       ['protein', 'fat'],
@@ -226,7 +222,6 @@ function Menu() {
     ['protein'],
     false,
     steak_price,
-    1,
     BakeryItem(
       'steak',
       ['protein'],
@@ -243,7 +238,6 @@ function Menu() {
     ['protein'],
     false,
     egg_price,
-    2,
     BakeryItem(
       'egg',
       ['protein'],
@@ -260,7 +254,6 @@ function Menu() {
     ['fat'],
     true,
     butter_price,
-    2,
     BakeryItem(
       'butter',
       ['fat'],
@@ -277,7 +270,6 @@ function Menu() {
     ['protein', 'fat', 'carb'],
     false,
     human_price,
-    2,
     BakeryItem(
       'human',
       ['protein', 'fat', 'carb'],
@@ -294,7 +286,6 @@ function Menu() {
     ['carb', 'fat'],
     true,
     cake_price,
-    2,
     BakeryItem(
       'cake',
       ['carb', 'fat'],
@@ -311,7 +302,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     pork_price,
-    3,
     BakeryItem(
       'pork',
       ['protein', 'fat'],
@@ -328,7 +318,6 @@ function Menu() {
     ['carb'],
     true,
     mango_price,
-    5,
     BakeryItem(
       'mango',
       ['carb'],
@@ -345,7 +334,6 @@ function Menu() {
     ['protein'],
     true,
     beans_price,
-    4,
     BakeryItem(
       'beans',
       ['protein'],
@@ -391,13 +379,9 @@ function Menu() {
   }
 
   if (chosen === 'Price') {
-    // console.log('DSKFJSKLJFLSLDFj')
+    console.log('DSKFJSKLJFLSLDFj')
     final_list.sort(function (a, b) {
       return a[2] - b[2]
-    })
-  } else {
-    final_list.sort(function (a, b) {
-      return a[3] - b[3]
     })
   }
 
@@ -416,15 +400,7 @@ function Menu() {
         {toast_count * toast_price +
           cheese_count * cheese_price +
           waffle_count * waffle_price +
-          chicken_count * chicken_price +
-          steak_count * steak_price +
-          egg_count * egg_price +
-          human_count * human_price +
-          cake_count * cake_price +
-          pork_count * pork_price +
-          butter_count * butter_price +
-          mango_count * mango_price +
-          beans_count * beans_price}
+          chicken_count * chicken_price}
       </h1>
       <SortPriceButton chosen={chosen} changeChosen={changeChosen} />
       <h5>

@@ -44,9 +44,7 @@
 
 .flex-parent {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 50px 50px 50px 50px
+  justify-content: space-between;
 
 }
 

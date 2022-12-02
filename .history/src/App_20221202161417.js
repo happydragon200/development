@@ -1,19 +1,9 @@
 import React, { useState } from 'react'
 import baguette from './images/baguette.jpg'
-
 import toast from './images/toast.png'
 import cheese from './images/cheese.jpg'
 import waffle from './images/waffle.jpg'
 import chicken from './images/chicken.jpg'
-import steak from './images/steak.jpg'
-import pork from './images/pork.jpg'
-import egg from './images/egg.jpg'
-import mango from './images/mango.jpg'
-import butter from './images/butter.jpg'
-import beans from './images/beans.jpg'
-import human from './images/human.jpg'
-import cake from './images/cake.jpg'
-
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -39,6 +29,10 @@ function FilterBar(props) {
   const carbsButton = FilterButton(selected, changeSelected, 'carb')
   const proteinButton = FilterButton(selected, changeSelected, 'protein')
   const fatButton = FilterButton(selected, changeSelected, 'fat')
+
+  const pieButton = FilterButton(selected, changeSelected, 'pie')
+  const cakeButton = FilterButton(selected, changeSelected, 'cake')
+  const otherButton = FilterButton(selected, changeSelected, 'other')
 
   const buttons = [carbsButton, proteinButton, fatButton]
 
@@ -134,33 +128,16 @@ function Menu() {
   const [cheese_count, cheese_setcount] = useState(0)
   const [waffle_count, waffle_setcount] = useState(0)
   const [chicken_count, chicken_setcount] = useState(0)
-  const [steak_count, steak_setcount] = useState(0)
-  const [egg_count, egg_setcount] = useState(0)
-  const [cake_count, cake_setcount] = useState(0)
-  const [human_count, human_setcount] = useState(0)
-  const [beans_count, beans_setcount] = useState(0)
-  const [butter_count, butter_setcount] = useState(0)
-  const [mango_count, mango_setcount] = useState(0)
-  const [pork_count, pork_setcount] = useState(0)
 
   const toast_price = 5
   const cheese_price = 10
   const waffle_price = 9
   const chicken_price = 0
-  const steak_price = 100
-  const egg_price = 3
-  const pork_price = 90
-  const butter_price = 4
-  const human_price = 1
-  const cake_price = 30
-  const mango_price = 230
-  const beans_price = 2
 
   const toast_comp = [
     ['carb'],
     true,
     toast_price,
-    0,
     BakeryItem(
       'toast',
       ['carb'],
@@ -169,14 +146,12 @@ function Menu() {
       toast,
       toast_count,
       toast_setcount,
-      0,
     ),
   ]
   const cheese_comp = [
     ['protein'],
     true,
     cheese_price,
-    0,
     BakeryItem(
       'cheese',
       ['protein'],
@@ -185,14 +160,12 @@ function Menu() {
       cheese,
       cheese_count,
       cheese_setcount,
-      0,
     ),
   ]
   const waffle_comp = [
     ['carb'],
     true,
     waffle_price,
-    0,
     BakeryItem(
       'waffles',
       ['carb'],
@@ -201,7 +174,6 @@ function Menu() {
       waffle,
       waffle_count,
       waffle_setcount,
-      0,
     ),
   ]
 
@@ -209,7 +181,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     chicken_price,
-    1,
     BakeryItem(
       'chicken',
       ['protein', 'fat'],
@@ -218,7 +189,6 @@ function Menu() {
       chicken,
       chicken_count,
       chicken_setcount,
-      1,
     ),
   ]
 
@@ -226,7 +196,6 @@ function Menu() {
     ['protein'],
     false,
     steak_price,
-    1,
     BakeryItem(
       'steak',
       ['protein'],
@@ -235,15 +204,13 @@ function Menu() {
       steak,
       steak_count,
       steak_setcount,
-      1,
     ),
   ]
 
-  const egg_comp = [
+  const egg = [
     ['protein'],
     false,
     egg_price,
-    2,
     BakeryItem(
       'egg',
       ['protein'],
@@ -252,15 +219,13 @@ function Menu() {
       egg,
       egg_count,
       egg_setcount,
-      2,
     ),
   ]
 
-  const butter_comp = [
+  const butter = [
     ['fat'],
     true,
     butter_price,
-    2,
     BakeryItem(
       'butter',
       ['fat'],
@@ -269,15 +234,13 @@ function Menu() {
       butter,
       butter_count,
       butter_setcount,
-      2,
     ),
   ]
 
-  const human_comp = [
+  const human = [
     ['protein', 'fat', 'carb'],
     false,
     human_price,
-    2,
     BakeryItem(
       'human',
       ['protein', 'fat', 'carb'],
@@ -286,15 +249,13 @@ function Menu() {
       human,
       human_count,
       human_setcount,
-      2,
     ),
   ]
 
-  const cake_comp = [
+  const cake = [
     ['carb', 'fat'],
     true,
     cake_price,
-    2,
     BakeryItem(
       'cake',
       ['carb', 'fat'],
@@ -303,15 +264,13 @@ function Menu() {
       cake,
       cake_count,
       cake_setcount,
-      2,
     ),
   ]
 
-  const pork_comp = [
+  const pork = [
     ['protein', 'fat'],
     false,
     pork_price,
-    3,
     BakeryItem(
       'pork',
       ['protein', 'fat'],
@@ -320,58 +279,40 @@ function Menu() {
       pork,
       pork_count,
       pork_setcount,
-      3,
     ),
   ]
 
-  const mango_comp = [
+  const mango = [
     ['carb'],
-    true,
-    mango_price,
-    5,
+    false,
+    chicken_price,
     BakeryItem(
-      'mango',
-      ['carb'],
-      true,
-      mango_price,
-      mango,
-      mango_count,
-      mango_setcount,
-      5,
-    ),
-  ]
-
-  const beans_comp = [
-    ['protein'],
-    true,
-    beans_price,
-    4,
-    BakeryItem(
-      'beans',
-      ['protein'],
+      'chicken',
+      ['protein', 'fat'],
       false,
-      beans_price,
-      beans,
-      beans_count,
-      beans_setcount,
-      4,
+      chicken_price,
+      chicken,
+      chicken_count,
+      chicken_setcount,
     ),
   ]
 
-  var final_list = [
-    toast_comp,
-    cheese_comp,
-    waffle_comp,
-    chicken_comp,
-    steak_comp,
-    egg_comp,
-    human_comp,
-    cake_comp,
-    pork_comp,
-    butter_comp,
-    mango_comp,
-    beans_comp,
+  const chicken_comp = [
+    ['protein', 'fat'],
+    false,
+    chicken_price,
+    BakeryItem(
+      'chicken',
+      ['protein', 'fat'],
+      false,
+      chicken_price,
+      chicken,
+      chicken_count,
+      chicken_setcount,
+    ),
   ]
+
+  var final_list = [toast_comp, cheese_comp, waffle_comp, chicken_comp]
 
   if (selected.length > 0) {
     final_list = final_list.filter(function (food) {
@@ -391,13 +332,9 @@ function Menu() {
   }
 
   if (chosen === 'Price') {
-    // console.log('DSKFJSKLJFLSLDFj')
+    console.log('DSKFJSKLJFLSLDFj')
     final_list.sort(function (a, b) {
       return a[2] - b[2]
-    })
-  } else {
-    final_list.sort(function (a, b) {
-      return a[3] - b[3]
     })
   }
 
@@ -416,25 +353,14 @@ function Menu() {
         {toast_count * toast_price +
           cheese_count * cheese_price +
           waffle_count * waffle_price +
-          chicken_count * chicken_price +
-          steak_count * steak_price +
-          egg_count * egg_price +
-          human_count * human_price +
-          cake_count * cake_price +
-          pork_count * pork_price +
-          butter_count * butter_price +
-          mango_count * mango_price +
-          beans_count * beans_price}
+          chicken_count * chicken_price}
       </h1>
       <SortPriceButton chosen={chosen} changeChosen={changeChosen} />
-      <h5>
+      <h2>
         Your shopping cart: {toast_count} pieces of Toast, {cheese_count} pieces
-        of Cheese, {waffle_count} pieces of Waffles, {chicken_count} pieces of
-        chicken, {steak_count} cuts of steak, {egg_count} eggs, {human_count}{' '}
-        humans, {cake_count} slices of cake, {pork_count} slices of pork,{' '}
-        {butter_count} sticks of butter, {mango_count} mangos, and {beans_count}{' '}
-        bowls of beans.
-      </h5>
+        of Cheese, {waffle_count} pieces of Waffles, and {chicken_count} pieces
+        of chicken
+      </h2>
 
       <h3>RESET</h3>
       <ResetButton
@@ -489,16 +415,9 @@ function SortPriceButton(props) {
   )
 }
 
-function BakeryItem(
-  label,
-  macros,
-  veg,
-  price,
-  img,
-  count,
-  setCount,
-  popularity,
-) {
+function BakeryItem(label, macros, veg, price, img, count, setCount) {
+  // const { img, count, setCount } = prop
+
   return (
     <div className="pad">
       <img src={img} className="Item-small" />
@@ -506,7 +425,6 @@ function BakeryItem(
       <p>Maros: {macros}</p>
       <p>Vegetarian: {veg.toString()}</p>
       <p>Price: {price}</p>
-      <p>Popularity: {popularity}/5</p>
       <p className="smull">You have {count} of this item</p>
       <button onClick={() => setCount(count + 1)}>Add 1 to Cart</button>
 

@@ -160,7 +160,6 @@ function Menu() {
     ['carb'],
     true,
     toast_price,
-    0,
     BakeryItem(
       'toast',
       ['carb'],
@@ -397,7 +396,7 @@ function Menu() {
     })
   } else {
     final_list.sort(function (a, b) {
-      return a[3] - b[3]
+      return a[2] - b[2]
     })
   }
 

@@ -156,11 +156,11 @@ function Menu() {
   const mango_price = 230
   const beans_price = 2
 
+
   const toast_comp = [
     ['carb'],
     true,
     toast_price,
-    0,
     BakeryItem(
       'toast',
       ['carb'],
@@ -169,14 +169,13 @@ function Menu() {
       toast,
       toast_count,
       toast_setcount,
-      0,
+      0
     ),
   ]
   const cheese_comp = [
     ['protein'],
     true,
     cheese_price,
-    0,
     BakeryItem(
       'cheese',
       ['protein'],
@@ -185,14 +184,13 @@ function Menu() {
       cheese,
       cheese_count,
       cheese_setcount,
-      0,
+      0
     ),
   ]
   const waffle_comp = [
     ['carb'],
     true,
     waffle_price,
-    0,
     BakeryItem(
       'waffles',
       ['carb'],
@@ -201,7 +199,7 @@ function Menu() {
       waffle,
       waffle_count,
       waffle_setcount,
-      0,
+      0
     ),
   ]
 
@@ -209,7 +207,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     chicken_price,
-    1,
     BakeryItem(
       'chicken',
       ['protein', 'fat'],
@@ -218,7 +215,7 @@ function Menu() {
       chicken,
       chicken_count,
       chicken_setcount,
-      1,
+      1
     ),
   ]
 
@@ -226,7 +223,6 @@ function Menu() {
     ['protein'],
     false,
     steak_price,
-    1,
     BakeryItem(
       'steak',
       ['protein'],
@@ -235,7 +231,7 @@ function Menu() {
       steak,
       steak_count,
       steak_setcount,
-      1,
+      1
     ),
   ]
 
@@ -243,7 +239,6 @@ function Menu() {
     ['protein'],
     false,
     egg_price,
-    2,
     BakeryItem(
       'egg',
       ['protein'],
@@ -252,7 +247,7 @@ function Menu() {
       egg,
       egg_count,
       egg_setcount,
-      2,
+      2
     ),
   ]
 
@@ -260,7 +255,6 @@ function Menu() {
     ['fat'],
     true,
     butter_price,
-    2,
     BakeryItem(
       'butter',
       ['fat'],
@@ -269,7 +263,7 @@ function Menu() {
       butter,
       butter_count,
       butter_setcount,
-      2,
+      2
     ),
   ]
 
@@ -277,7 +271,6 @@ function Menu() {
     ['protein', 'fat', 'carb'],
     false,
     human_price,
-    2,
     BakeryItem(
       'human',
       ['protein', 'fat', 'carb'],
@@ -286,7 +279,7 @@ function Menu() {
       human,
       human_count,
       human_setcount,
-      2,
+      2
     ),
   ]
 
@@ -294,7 +287,6 @@ function Menu() {
     ['carb', 'fat'],
     true,
     cake_price,
-    2,
     BakeryItem(
       'cake',
       ['carb', 'fat'],
@@ -303,7 +295,7 @@ function Menu() {
       cake,
       cake_count,
       cake_setcount,
-      2,
+      2
     ),
   ]
 
@@ -311,7 +303,6 @@ function Menu() {
     ['protein', 'fat'],
     false,
     pork_price,
-    3,
     BakeryItem(
       'pork',
       ['protein', 'fat'],
@@ -320,7 +311,7 @@ function Menu() {
       pork,
       pork_count,
       pork_setcount,
-      3,
+      3
     ),
   ]
 
@@ -328,7 +319,6 @@ function Menu() {
     ['carb'],
     true,
     mango_price,
-    5,
     BakeryItem(
       'mango',
       ['carb'],
@@ -337,7 +327,7 @@ function Menu() {
       mango,
       mango_count,
       mango_setcount,
-      5,
+      5
     ),
   ]
 
@@ -345,7 +335,6 @@ function Menu() {
     ['protein'],
     true,
     beans_price,
-    4,
     BakeryItem(
       'beans',
       ['protein'],
@@ -354,24 +343,11 @@ function Menu() {
       beans,
       beans_count,
       beans_setcount,
-      4,
+      4
     ),
   ]
 
-  var final_list = [
-    toast_comp,
-    cheese_comp,
-    waffle_comp,
-    chicken_comp,
-    steak_comp,
-    egg_comp,
-    human_comp,
-    cake_comp,
-    pork_comp,
-    butter_comp,
-    mango_comp,
-    beans_comp,
-  ]
+  var final_list = [toast_comp, cheese_comp, waffle_comp, chicken_comp, steak_comp, egg_comp, human_comp, cake_comp, pork_comp, butter_comp, mango_comp, beans_comp]
 
   if (selected.length > 0) {
     final_list = final_list.filter(function (food) {
@@ -391,13 +367,9 @@ function Menu() {
   }
 
   if (chosen === 'Price') {
-    // console.log('DSKFJSKLJFLSLDFj')
+    console.log('DSKFJSKLJFLSLDFj')
     final_list.sort(function (a, b) {
       return a[2] - b[2]
-    })
-  } else {
-    final_list.sort(function (a, b) {
-      return a[3] - b[3]
     })
   }
 
@@ -416,24 +388,13 @@ function Menu() {
         {toast_count * toast_price +
           cheese_count * cheese_price +
           waffle_count * waffle_price +
-          chicken_count * chicken_price +
-          steak_count * steak_price +
-          egg_count * egg_price +
-          human_count * human_price +
-          cake_count * cake_price +
-          pork_count * pork_price +
-          butter_count * butter_price +
-          mango_count * mango_price +
-          beans_count * beans_price}
+          chicken_count * chicken_price}
       </h1>
       <SortPriceButton chosen={chosen} changeChosen={changeChosen} />
       <h5>
         Your shopping cart: {toast_count} pieces of Toast, {cheese_count} pieces
-        of Cheese, {waffle_count} pieces of Waffles, {chicken_count} pieces of
-        chicken, {steak_count} cuts of steak, {egg_count} eggs, {human_count}{' '}
-        humans, {cake_count} slices of cake, {pork_count} slices of pork,{' '}
-        {butter_count} sticks of butter, {mango_count} mangos, and {beans_count}{' '}
-        bowls of beans.
+        of Cheese, {waffle_count} pieces of Waffles, {chicken_count} pieces
+        of chicken, {steak_count} cuts of steak, {egg_count} eggs, {human_count} humans, {cake_count} slices of cake, {pork_count} slices of pork, 
       </h5>
 
       <h3>RESET</h3>
@@ -489,16 +450,8 @@ function SortPriceButton(props) {
   )
 }
 
-function BakeryItem(
-  label,
-  macros,
-  veg,
-  price,
-  img,
-  count,
-  setCount,
-  popularity,
-) {
+function BakeryItem(label, macros, veg, price, img, count, setCount, popularity) {
+
   return (
     <div className="pad">
       <img src={img} className="Item-small" />
