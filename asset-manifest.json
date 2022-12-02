@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/development/static/css/main.c9d98085.css",
-    "main.js": "/development/static/js/main.36a27b81.js",
+    "main.css": "/development/static/css/main.d3db5df7.css",
+    "main.js": "/development/static/js/main.2469d634.js",
     "static/media/toast.png": "/development/static/media/toast.02be4fd6e8eb55e59d34.png",
+    "static/media/pork.jpg": "/development/static/media/pork.3df7ef5207967434497f.jpg",
+    "static/media/steak.jpg": "/development/static/media/steak.5877d8f4f043905d4a2a.jpg",
     "static/media/baguette.jpg": "/development/static/media/baguette.e444f4b60514dd9e5ad8.jpg",
     "static/media/cheese.jpg": "/development/static/media/cheese.8e58f2c30c1c3cd55af4.jpg",
+    "static/media/mango.jpg": "/development/static/media/mango.881d030a0c04720e1420.jpg",
     "static/media/chicken.jpg": "/development/static/media/chicken.41b534cb68e0e8ee0c53.jpg",
+    "static/media/cake.jpg": "/development/static/media/cake.a61d1d2f5995ac6cc8bc.jpg",
+    "static/media/beans.jpg": "/development/static/media/beans.88b2b939c52068e6c9b2.jpg",
+    "static/media/egg.jpg": "/development/static/media/egg.732e25b20e789c6e7243.jpg",
     "static/media/waffle.jpg": "/development/static/media/waffle.4c0aacb9374eeabbd67f.jpg",
+    "static/media/butter.jpg": "/development/static/media/butter.9f7f8caf86ddc25d0f53.jpg",
+    "static/media/human.jpg": "/development/static/media/human.4a33df3c07c70836a0f2.jpg",
     "index.html": "/development/index.html",
-    "main.c9d98085.css.map": "/development/static/css/main.c9d98085.css.map",
-    "main.36a27b81.js.map": "/development/static/js/main.36a27b81.js.map"
+    "main.d3db5df7.css.map": "/development/static/css/main.d3db5df7.css.map",
+    "main.2469d634.js.map": "/development/static/js/main.2469d634.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9d98085.css",
-    "static/js/main.36a27b81.js"
+    "static/css/main.d3db5df7.css",
+    "static/js/main.2469d634.js"
   ]
 }
