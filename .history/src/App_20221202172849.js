@@ -439,7 +439,7 @@ function Menu() {
         bowls of beans.
       </h5>
 
-      {/* <h3>RESET</h3> */}
+      <h3>RESET</h3>
       {/* <ResetButton
         changeSelected={changeSelected}
         toast_setcount={toast_setcount}
