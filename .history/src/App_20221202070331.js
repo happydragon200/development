@@ -224,6 +224,11 @@ function Menu() {
 
   final_list = final_list.map((item) => item.slice(-1))
 
+  // console.log('sorted')
+
+  // console.log(final_list)
+  // console.log('hm')
+
   return (
     <>
       <h2>Macros</h2>

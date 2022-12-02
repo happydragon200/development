@@ -135,7 +135,7 @@ function Menu() {
 
   const toast_price = 5
   const cheese_price = 10
-  const waffle_price = 9
+  const waffle_price = 100
   const chicken_price = 0
 
   const toast_comp = [
@@ -218,11 +218,16 @@ function Menu() {
   if (chosen === 'Price') {
     console.log('DSKFJSKLJFLSLDFj')
     final_list.sort(function (a, b) {
-      return a[2] - b[2]
+      return a[1] - b[1]
     })
   }
 
   final_list = final_list.map((item) => item.slice(-1))
+
+  // console.log('sorted')
+
+  // console.log(final_list)
+  // console.log('hm')
 
   return (
     <>
