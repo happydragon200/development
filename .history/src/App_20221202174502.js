@@ -449,7 +449,6 @@ function Menu() {
         chicken_setcount={chicken_setcount}
       /> */}
 
-      {/* the following code maps the array of items (which includes the component BakeryItem) to a ShopItem component */}
       <div className="flex-parent">{/*final_list*/}{final_list.map((item) => {return <ShopItem component={item[item.length - 1]} />})}</div>
     </>
   )

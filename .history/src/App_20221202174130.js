@@ -268,7 +268,7 @@ function Menu() {
     BakeryItem(
       'butter',
       ['fat'],
-      true,
+      false,
       butter_price,
       butter,
       butter_count,
@@ -353,7 +353,7 @@ function Menu() {
     BakeryItem(
       'beans',
       ['protein'],
-      true,
+      false,
       beans_price,
       beans,
       beans_count,
@@ -449,8 +449,7 @@ function Menu() {
         chicken_setcount={chicken_setcount}
       /> */}
 
-      {/* the following code maps the array of items (which includes the component BakeryItem) to a ShopItem component */}
-      <div className="flex-parent">{/*final_list*/}{final_list.map((item) => {return <ShopItem component={item[item.length - 1]} />})}</div>
+      <div className="flex-parent">{/*final_list*/}{final_list.map((item) => {<ShopItem component={item[item.length - 1]} />})}</div>
     </>
   )
 }
